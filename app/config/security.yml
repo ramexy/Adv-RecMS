@@ -1,7 +1,16 @@
 # To get started with security, check out the documentation:
 # https://symfony.com/doc/current/security.html
-security:
 
+security:
+    encoders:
+        Symfony\Component\Security\Core\User\User:
+            algorithm: bcrypt
+        AdminBundle\Entity\User:
+            algorithm: bcrypt
+#security:
+#    encoders:
+#        AdminBundle:Entity:User:
+#            algorithm: bcrypt
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
         in_memory:
