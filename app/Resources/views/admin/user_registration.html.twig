@@ -1,13 +1,15 @@
 {% extends 'base.html.twig'  %}
-
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
 {% block body %}
-    {{ form_start(form) }}
-        {{ form_row(form.fullname) }}
-        {{ form_row(form.username) }}
-        {{ form_row(form.email) }}
-        {{ form_row(form.password) }}
-        {{ form_row(form.phone) }}
-        {{ form_row(form.position) }}
-         <button type="submit">Register!</button>
-    {{ form_end(form) }}
+
+                {{ form_start(form) }}
+                {{ form_row(form.fullname) }}
+                {{ form_row(form.username) }}
+                {{ form_row(form.email) }}
+                {{ form_row(form.password) }}
+                {{ form_row(form.phone) }}
+                {{ form_row(form.position) }}
+                <button type="submit" class="btn btn-primary">Register!</button>
+                {{ form_end(form) }}
+
 {% endblock %}

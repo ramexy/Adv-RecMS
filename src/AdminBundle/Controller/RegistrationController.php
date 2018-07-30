@@ -43,7 +43,7 @@ class RegistrationController extends Controller
         }
 
 
-        return $this->render('admin/user_registration.html.twig', array('form' => $form->createView()));
+        return $this->render('admin/admin_registration.html.twig', array('form' => $form->createView()));
 
     }
 
