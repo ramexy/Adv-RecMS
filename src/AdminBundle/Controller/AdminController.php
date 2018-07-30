@@ -13,6 +13,13 @@ class AdminController extends Controller
     public function indexAction()
     {
      
-        return $this->render('admin/admin.html.twig');
+        return $this->render('admin/admin_login.html.twig');
+    }
+
+    /**
+     * @Route("/home", name="admin_home")
+     */
+    public function homeAction(){
+        return $this->render('admin/admin_home.html.twig');
     }
 }
