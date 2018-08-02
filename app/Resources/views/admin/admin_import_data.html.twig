@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {#r row for the header content#}
+    {% include 'admin/includes/header.twig' %}
+    <div class="container-fluid">
+    <div class="row">
+        {% include'admin/includes/side-nav.twig' %}
+        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3" style="padding-left: 90px;">
+            <div class="card text-left">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> EFD Stock Distribution</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">UIN Processing Form</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Service Collection</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">How to import UIN Processing Form Data</h5>
+                    <ul>
+                        <li>
+                            Make sure the imported file is .cvs file.
+                        </li>
+                        <li>
+                            Click Browse and select the cvs file.
+                        </li>
+                        <li>
+                            Click Open.
+                        </li>
+                        <li>
+                            Click import button.
+                        </li>
+
+                    </ul>
+                    <a href="#" class="btn btn-primary">Select file</a>
+                </div>
+            </div>
+        </main>
+    </div>
+{% endblock %}

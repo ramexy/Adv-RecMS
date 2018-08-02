@@ -1,22 +1,55 @@
 {% extends 'base.html.twig' %}
+
 {% block body %}
     {#r row for the header content#}
     {% include 'admin/includes/header.twig' %}
     <div class="container-fluid">
         <div class="row">
             {% include'admin/includes/side-nav.twig' %}
-            <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
-                <h5>New Staff Registration Form &nbsp; &nbsp; &nbsp; <button  href="#" type="button" class="btn btn-outline-primary btn-sm">List Staff</button></h5>
+            <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3" style="padding-left: 160px">
+                <h5>New Staff Registration Form &nbsp; &nbsp; &nbsp; <a  href="{{ path('staff') }}" type="link" class="btn btn-outline-primary btn-sm">List Staff</a></h5>
                 {{ form_start(form) }}
-                    {{ form_row(form.fullname) }}
-                    {{ form_row(form.username) }}
-                    {{ form_row(form.email) }}
-                    {{ form_row(form.password) }}
-                    {{ form_row(form.phone) }}
-                    {{ form_row(form.position) }}
-                <button type="submit">Register!</button>
+                <div class="row">
+                    <div class="form-group col-xs-12 col-md-4 form-control-md">
+                        {{ form_row(form.fullname) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-xs-12 col-md-4 form-control-md">
+                        {{ form_row(form.username) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4 form-control-md">
+                        {{ form_row(form.email) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4 form-control-md">
+                        {{ form_row(form.password) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4 form-control-md">
+                        {{ form_row(form.phone) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4 form-control-md">
+                        {{ form_row(form.position) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4 form-control-md">
+                        {{ form_row(form.position) }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-4 col-md-4 form-control-md">
+                        <button type="submit" class="btn btn-primary">Add new user</button>
+                    </div>
+                </div>
                 {{ form_end(form) }}
             </main>
         </div>
-    </div>
 {% endblock %}
