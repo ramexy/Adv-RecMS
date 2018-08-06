@@ -5,6 +5,9 @@
         {% include 'admin/includes/header.twig' %}
 
         {% include'admin/includes/side-nav.twig' %}
+        {% if is_granted('ROLE_ADMIN') %}
+            <a href="#">Delete</a>
+        {% endif %}
 
     </div>
 {% endblock %}
