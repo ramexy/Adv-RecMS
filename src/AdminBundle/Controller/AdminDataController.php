@@ -13,11 +13,12 @@ class AdminDataController extends Controller{
         return $this->render('admin/admin_import_data.html.twig');
     }
 
-    /**
-     * @Route("/devices", name="devices")
-     */
-    public function showDevices(){
-        return $this->render('admin/admin_show_devices.html.twig');
-    }
+    //this will be the admin implementation for Advatech devices
+//    /**
+//     * @Route("/devices", name="devices")
+//     */
+//    public function showDevices(){
+//        return $this->render('admin/admin_show_devices.html.twig');
+//    }
 
 }
