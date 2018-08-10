@@ -7,20 +7,20 @@
             {% include'admin/includes/side-nav.twig' %}
             <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
                 <h5>EFD STOCK DISTRIBUTION &nbsp; &nbsp; &nbsp; <a  href="#" type="link" class="btn btn-outline-primary btn-sm">Add New Device</a></h5>
-                <div>
-                    <form action="" method="get">
-                        <input name="filter" placeholder="Enter name or serial number" type="text" id="filter-box">
-                        <button type="submit" class="btn btn-outline-primary btn-sm">Filter now</button>
-                    </form>
-                </div><br>
-                <div class="table-responsive table-responsive-md">
+                {#<div>#}
+                    {#<form action="" method="get">#}
+                        {#<input name="filter" placeholder="Enter name or serial number" type="text" id="filter-box">#}
+                        {#<button type="submit" class="btn btn-outline-primary btn-sm">Filter now</button>#}
+                    {#</form>#}
+                {#</div><br>#}
+                <div class="table-hover">
                     <table class="table  table-striped table-sm">
                         <thead>
                         <tr>
                             <td>#</td>
                             <th class="bg-light">SN</th>
                             <th class="bg-light">CUSTOMER NAME</th>
-                            <th class="bg-light">ADDRESS</th>
+                            <th class="bg-light">TIN</th>
                             <th class="bg-light">PHONE</th>
                             <th CLASS="bg-light">OPERATIONS</th>
                         </tr>
@@ -31,13 +31,13 @@
                                 <td>{{ device.id }}</td>
                                 <td>{{ device.SN }}</td>
                                 <td>{{ device.customerName }}</td>
-                                <td>{{ device.address }}</td>
+                                <td>{{ device.tin }}</td>
                                 <td>{{ device.telephone }}</td>
                                 <td>
                                     <div class="dropdown">
                                         <button class="btn btn-sm btn-info"><i class="fa fa-wrench"></i>&nbsp;actions</button>
                                         <div class="dropdown-content">
-                                            <a href="#" class="btn-info btn-sm"><i class="fa fa-list"></i>&nbsp;Full Info</a>
+                                            <a href="#" class="btn-info btn-sm"><i class="fa fa-list"></i>&nbsp;Full info</a>
                                             <a href="#" class="btn-sm"><i class="fa fa-edit"></i>&nbsp;Edit</a>
                                             <a href="#" class="btn-danger btn-sm"><i class="fa fa-trash-alt"></i>&nbsp;Delete</a>
                                         </div>
